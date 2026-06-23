@@ -22,7 +22,7 @@
 | 1 | README.md | 프로젝트의 문제 정의, 철학, MVP 범위 |
 | 2 | PROJECT_DIRECTION.md | 프로젝트 방향성, 분석 철학, 리스크 모델 개요 |
 | 3 | DATA_SOURCE_RISK_MODEL_MAPPING.md | 공공데이터, 분석 지표, 리스크 모델 연결 |
-| 4 | SYSTEM_ARCHITECTURE.md | Spring 서버와 Python 모델링 서버의 책임 분리 |
+| 4 | SYSTEM_ARCHITECTURE.md | Vue, Spring Boot, Python 모델링 서버의 책임 분리 |
 | 5 | INITIAL_SETUP.md | 두 명이 실제로 어떻게 시작할지 정리 |
 
 각 문서의 기준 역할:
@@ -52,7 +52,10 @@ README.md는 너무 복잡하게 만들지 않는다.
 보험 상품 추천이 아니라 개인 재무 리스크 분석
 
 기술 구조:
-Spring + View 웹 애플리케이션
+Vue Frontend
++ Spring Boot LTS Backend
++ JPA
++ QueryDSL
 + Python Modeling Server
 
 분석 방식:
@@ -180,7 +183,7 @@ Spring + View 웹 애플리케이션
 - 결과 리포트 생성
 - 분석 이력 저장
 
-단, 최종 리스크 계산과 모델링은 Python 서버가 담당하고 Spring은 요청 처리, 데이터 저장, Python 서버 호출, 결과 표시를 담당한다.
+단, 최종 리스크 계산과 모델링은 Python 서버가 담당하고 Spring Boot는 요청 처리, 데이터 저장, Python 서버 호출, Vue API 제공을 담당한다.
 
 ## 6. Suggested Role Split
 
@@ -284,7 +287,7 @@ DATASET_SPEC.md
 
 | 결정 항목 | 현재 상태 | 권장 방향 |
 | --- | --- | --- |
-| 기술 스택 | 확정 | Spring + View, Python Modeling Server |
+| 기술 스택 | 확정 | Vue, Spring Boot LTS, JPA, QueryDSL, Python Modeling Server |
 | 데이터 저장소 | 미정 | 초기에는 정적 JSON/CSV, 이후 DB |
 | API 연동 | 미정 | 초기에는 수동 수집 데이터, 이후 API |
 | 중대질병 범위 | 암/심혈관/뇌혈관 후보 | 1차는 암 중심, 이후 확장 |
@@ -297,7 +300,10 @@ DATASET_SPEC.md
 
 ```text
 웹 화면과 백엔드:
-Spring + View
+Vue Frontend + Spring Boot Backend
+
+백엔드 영속성/조회:
+JPA + QueryDSL
 
 모델링:
 Python Modeling Server
@@ -306,7 +312,7 @@ Python Modeling Server
 HTTP API
 
 데이터 저장/정제:
-Spring Backend
+Spring Boot Backend
 
 리스크 계산/점수화:
 Python Modeling Server

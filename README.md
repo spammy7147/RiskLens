@@ -17,7 +17,7 @@
 | 1 | [README.md](README.md) | 프로젝트 문제 정의, 철학, MVP 범위 |
 | 2 | [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md) | 프로젝트 방향성, 분석 철학, 리스크 모델 개요 |
 | 3 | [DATA_SOURCE_RISK_MODEL_MAPPING.md](DATA_SOURCE_RISK_MODEL_MAPPING.md) | 공공데이터, 분석 지표, 리스크 모델 연결 |
-| 4 | [SYSTEM_ARCHITECTURE.md](SYSTEM_ARCHITECTURE.md) | Spring 서버와 Python 모델링 서버의 책임 분리 |
+| 4 | [SYSTEM_ARCHITECTURE.md](SYSTEM_ARCHITECTURE.md) | Vue, Spring Boot, Python 모델링 서버의 책임 분리 |
 | 5 | [INITIAL_SETUP.md](INITIAL_SETUP.md) | 두 명이 실제로 어떻게 시작할지 정리 |
 
 초기 구현 전에는 `INITIAL_SETUP.md`의 작업 순서와 완료 기준을 먼저 확인한다.
