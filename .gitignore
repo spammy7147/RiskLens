@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Java / Spring
+.gradle/
+build/
+out/
+target/
+*.class
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# Generated data
+tmp/
+temp/
