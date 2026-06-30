@@ -2,7 +2,7 @@
 
 ## 1. Architecture Decision
 
-Life Risk Simulator는 다음 구조로 진행한다.
+RiskLens는 다음 구조로 진행한다.
 
 ```text
 Vue Frontend
@@ -339,24 +339,22 @@ Python 서버 장애 시 Spring 화면에서 분석을 완료할 수 없다.
 - 실패 사유를 저장한다.
 - 재시도 가능 구조를 고려한다.
 
-## 10. Documents To Add
+## 10. Related Design Documents
 
-이 아키텍처를 기준으로 다음 문서를 작성한다.
+이 아키텍처와 연결되는 문서는 다음과 같다.
 
-| 문서 | 목적 |
-| --- | --- |
-| DATASET_SPEC.md | Spring Boot가 저장/정제할 기준 데이터셋 정의 |
-| CALCULATION_SPEC.md | Python이 수행할 계산식 정의 |
-| API_CONTRACT.md | Vue-Spring Boot, Spring Boot-Python 요청/응답 DTO 정의 |
-| BACKEND_DESIGN.md | Spring Boot 모듈, JPA 엔티티, QueryDSL 조회, 분석 이력 구조 정의 |
-| MODELING_SERVER_DESIGN.md | Python 서버 구조와 계산 모듈 정의 |
+| 문서 | 상태 | 목적 |
+| --- | --- | --- |
+| DATASET_SPEC.md | 작성됨 | Spring Boot가 저장/정제할 기준 데이터셋 정의 |
+| CALCULATION_SPEC.md | 작성됨 | Python이 수행할 계산식 정의 |
+| API_CONTRACT.md | 다음 작성 | Vue-Spring Boot, Spring Boot-Python 요청/응답 DTO 정의 |
+| BACKEND_DESIGN.md | 다음 작성 | Spring Boot 모듈, JPA 엔티티, QueryDSL 조회, 분석 이력 구조 정의 |
+| MODELING_SERVER_DESIGN.md | 다음 작성 | Python 서버 구조와 계산 모듈 정의 |
 
-추천 작성 순서:
+다음 작성 순서:
 
 ```text
-DATASET_SPEC.md
--> CALCULATION_SPEC.md
--> API_CONTRACT.md
+API_CONTRACT.md
 -> BACKEND_DESIGN.md
 -> MODELING_SERVER_DESIGN.md
 ```
